@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!--goggle fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+ <div class="full-page">
+  
+   <!--loginbody-->
+ <div id="login-form" class="login page">
+  <div class="form-box">
+  <div class="botton-box">
+    <div id="btn"></div>
+<button type="button"  class="toggle-btn" onclick="login()">Log In</button>
+    <button type="button" class="toggle-btn" onclick="register()">Register</button> 
+  </div>
+      <!--login CONTENT--> 
+     <form id="login" class="input-group">
+      <input type="text" class="input-field" placeholder="E-mail" required>       
+       <input type="password" class="input-field" placeholder="Enter Password" required> 
+     <input type="checkbox" class="check-box"><span>Remember Password</span> 
+    <button type="submit" class="submit-btn" >Log In</button>
+       
+  </form>     
+   <!--REGISTRATION CONTENT-->  
+  <form id="register" class="input-group">
+    <div  class="ss">Name:<input type="text" class="input-field" placeholder="First Name Last Name" required></div> <br>
+     <div  class="ss">Phone Number:<input type="number" class="input-field" placeholder="+2347030340824"></div> <br>         <div  class="ss">E-mail:<input type="text" class="input-field" placeholder="E-mail" required></div>  <br>          
+     <div class="sj"> 
+       <div  class="ss">Favourite colour:<input type="color" class="input" placeholder="Favourite colour" maxlength=10> </div><br>
+     <DIV  class="ss">Date Of Birth:<input type="date" class="input-field" placeholder="Date Of Birth"></DIV>
+     </div><br>   
+     <div class="ss">Gender:
+      <input type="radio" name="exe" value=1>Male
+      <input type="radio" name="exe" value=1>Female
+     </div><br>   
+     <div  class="ss">Password <input type="password" class="input-field" placeholder="Enter Password" required> </div>  
+      <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+      <button type="submit" class="submit-btn" onclick="openPopup()">Register</button>
+ <div class="popup" id="popup">
+    <img src="mark.png" class="img">
+   <div class="content">
+     <h2>Thank you!</h2>
+    <p>Your details has been succesfully submitted.Thanks!</p>
+      <button type="button" onclick="closePopup()">OK</button>
+   </div>
+ </div>
+  
+  <script>
+  let popup = document.getElementById("popup");
+    
+  function openPopup(){
+   popup.classList.add("open-popup");
+   }
+  function closePopup(){
+   popup.classList.remove("open-popup");
+  }
+    
+</script>
+    
+</div>  
+</div>
+<script>
+  var x=document.getElementById('login');
+  var y=document.getElementById('register');
+  var z=document.getElementById('btn');
+  function register() {
+     x.style.left='-400px';
+     y.style.left='50px';
+     z.style.left='110px';
+  }
+   function login() {
+     x.style.left='50px';
+     y.style.left='450px';
+     z.style.left='0';
+  }
+</script>
+  
+</body>
+  
+</html>
+      
